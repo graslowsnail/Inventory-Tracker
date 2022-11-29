@@ -5,31 +5,28 @@
   </h2>
   <form class="edit-part-form">
     <div>
-      <input name="part-title" type="text" value="{{part.title}}" />
-      <span>({{format_url part.stock}})</span>
+      <input name="part-stock" type="number" value="{{part.stock}}" />
+      {{!-- <span>({{part.stock}})</span> --}}
     </div>
     <div>
-      {{part.stock}} {{format_plural "point" part.vote_count}} by you on {{format_date part.created_at}}
+      {{part.stock}}
       |
-      <a href="/part/{{part.id}}"> {{format_plural "comment" part.stock}}</a>
+      <a href="/part/{{part.id}}"> </a>
     </div>
     <button type="submit">Save part</button>
     <button type="button" class="delete-part-btn">Delete part</button>
   </form>
 </article>
 
-<form class="comment-form">
+<form class="edit-part-form">
   <div>
-    <textarea name="comment-body"></textarea>
+    <textarea name="part-title"></textarea>
   </div>
 
   <div>
-    <button type="submit">add comment</button>
+    <button type="submit">take out part</button>
   </div>
 </form>
 
-{{> comments part.comments}}
-
 <script src="/javascript/edit-part.js"></script>
 <script src="/javascript/delete-part.js"></script>
-<script src="/javascript/comment.js"></script>

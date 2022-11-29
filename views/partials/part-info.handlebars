@@ -1,13 +1,12 @@
 <article class="part">
   <div class="title">
-    <a href="{{stock}}" target="_blank">{{title}}</a>
-    <span>({{part.id}})</span>
+    <a>{{title}}</a>
   </div>
   <div class="meta">
-    Numver in stock:
+    Number in stock:
     {{stock}}
     |
     <a href="/part/{{id}}">{{part.stock}}
-      {{format_plural "comment" part.id}}</a>
+      {{format_plural "Edit Part" part.id}}</a>
   </div>
 </article>

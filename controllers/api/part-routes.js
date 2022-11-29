@@ -64,9 +64,10 @@ router.post("/", withAuth, (req, res) => {
 
 // update post name
 router.put("/:id", withAuth, (req, res) => {
+  console.log(req.params);
   Part.update(
     {
-      title: req.body.title,
+      stock: req.body.stock,
     },
     {
       where: {
@@ -79,6 +80,8 @@ router.put("/:id", withAuth, (req, res) => {
         res.status(404).json({ message: "No part found with this id" });
         return;
       }
+      console.log("###################");
+      console.log(dbPartData);
       res.json(dbPartData);
     })
     .catch((err) => {
