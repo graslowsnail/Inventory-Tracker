@@ -1,0 +1,35 @@
+<article>
+  <a href="/dashboard"> &larr; Back to dashboard</a>
+  <h2>
+    Edit part
+  </h2>
+  <form class="edit-part-form">
+    <div>
+      <input name="part-title" type="text" value="{{part.title}}" />
+      <span>({{format_url part.stock}})</span>
+    </div>
+    <div>
+      {{part.stock}} {{format_plural "point" part.vote_count}} by you on {{format_date part.created_at}}
+      |
+      <a href="/part/{{part.id}}"> {{format_plural "comment" part.stock}}</a>
+    </div>
+    <button type="submit">Save part</button>
+    <button type="button" class="delete-part-btn">Delete part</button>
+  </form>
+</article>
+
+<form class="comment-form">
+  <div>
+    <textarea name="comment-body"></textarea>
+  </div>
+
+  <div>
+    <button type="submit">add comment</button>
+  </div>
+</form>
+
+{{> comments part.comments}}
+
+<script src="/javascript/edit-part.js"></script>
+<script src="/javascript/delete-part.js"></script>
+<script src="/javascript/comment.js"></script>

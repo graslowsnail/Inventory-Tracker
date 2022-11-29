@@ -1,0 +1,31 @@
+<section>
+  <h2>Create New Post</h2>
+
+  <form class="new-part-form">
+    <div>
+      <label for="part-title">Title</label>
+      <input type="text" id="part-title" name="part-title" />
+    </div>
+    <div>
+      <label for="part-stock">how much stock</label>
+      <input id="part-stock" name="part-stock" />
+    </div>
+    <button type="submit" class="btn">Create</button>
+  </form>
+</section>
+
+{{!-- {{#if parts.length}}
+<section>
+  <h2>Your parts</h2>
+  <ol>
+    {{#each parts as |part|}}
+    <li>
+      {{> part-info part}}
+      <a href="/dashboard/edit/{{part.id}}" class="edit-link">Edit part</a>
+    </li>
+    {{/each}}
+  </ol>
+</section>
+{{/if}} --}}
+
+<script src="/javascript/add-part.js"></script>
