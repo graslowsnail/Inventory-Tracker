@@ -1,14 +1,14 @@
 async function editFormHandler(event) {
   event.preventDefault();
 
-  const title = document.querySelector('input[name="part-title"]').value.trim();
+  const stock = document.querySelector('input[name="part-stock"]').value.trim();
   const id = window.location.toString().split("/")[
     window.location.toString().split("/").length - 1
   ];
   const response = await fetch(`/api/parts/${id}`, {
     method: "PUT",
     body: JSON.stringify({
-      title,
+      stock,
     }),
     headers: {
       "Content-Type": "application/json",
@@ -16,7 +16,7 @@ async function editFormHandler(event) {
   });
 
   if (response.ok) {
-    document.location.replace("/dashboard/");
+    document.location.replace("/");
   } else {
     alert(response.statusText);
   }
