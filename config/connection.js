@@ -10,9 +10,9 @@ const sequelize = new Sequelize(
   process.env.DB_PASSWORD,
 
   {
-    dialectOptions: {
-      socketPath: "/tmp/mysql.sock",
-    },
+    // dialectOptions: {
+    //   socketPath: "/tmp/mysql.sock",
+    // },
     host: "localhost",
     dialect: "mysql",
     port: 3306,
