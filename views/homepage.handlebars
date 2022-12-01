@@ -15,7 +15,7 @@
         <table class="table">
           <thead class="thead-dark part">
             <tr>
-              <td scope="col">ID</td>
+              <td scope="col">Part ID</td>
               <td scope="col">Part Name</td>
               <td scope="col">Number in stock</td>
               <td scope="col">Edit</td>
@@ -24,8 +24,8 @@
         </table>
 <ol class="part-list">
   {{#each parts as |part|}}
-  <li>
+  <a>
     {{> part-info part }}
-  </li>
+  </a>
   {{/each}}
 </ol>

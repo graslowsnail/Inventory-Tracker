@@ -1,19 +1,18 @@
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+/>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+></script>
+<script
+  src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+></script>
 
-    <style>
-      table,
-      table td {
-        border: 1px solid #cccccc;
-      }
-      td {
-        height: 80px;
-        width: 160px;
-        text-align: center;
-        vertical-align: middle;
-      }
-    </style>
+<style>
+  table, table td { border: 1px solid #cccccc; } td { height: 80px; width:
+  160px; text-align: center; vertical-align: middle; }
+</style>
 <table class="table table table-striped">
   <tbody class="thead-dark">
     <tr>
@@ -21,7 +20,7 @@
       <td scope="col">{{title}}</td>
       <td scope="col">{{stock}}</td>
       <td scope="col"><a href="/part/{{id}}">{{part.stock}}
-        {{format_plural "Edit Part" part.id}}</a></td>
+          {{format_plural "Edit Part" part.id}}</a></td>
     </tr>
   </tbody>
 </table>
