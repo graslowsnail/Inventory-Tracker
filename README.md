@@ -25,7 +25,7 @@ This application was designed for employees to keep track of inventory without h
 
 
 ## Screenshots
-![](public/image/Create-New-post.png)
+![](public/image/Create-New-part.png)
 ![](public/images/login-screen.png)
 ![](public/images/Edit-Parts.png)
 ![](public/images/parts-database.png)
